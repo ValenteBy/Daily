@@ -1,8 +1,6 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
 
-void myFunction();
-
-void myFunctionCMD();
+void create_file();
 
 #endif

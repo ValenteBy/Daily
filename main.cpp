@@ -3,9 +3,7 @@
 
 int main(){
     
-
-    //myFunction();
-    myFunctionCMD();
+    create_file();
     
     return 0;
 }

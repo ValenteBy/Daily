@@ -1,18 +1,17 @@
 #include <iostream>
-#include <direct.h>
+#include <fstream>
+#include <string>
+
 #include "myheader.h"
 
-void myFunction(){
+void create_file()
+{
+    std::string input_new_file = "";
+    std::getline(std::cin, input_new_file);
+    input_new_file+=".txt";
 
-    std::cout << "Hello, cmake\n";
+    std::ofstream  MyFile(input_new_file);
+    std::cout << "Create file!!\n";
 
-    //_chdir("D:\\github");
-    //system("dir ");
-    //system("dir");
-
-}
-
-void myFunctionCMD(){
-    _chdir("cd ..");
-    system("dir");
+    MyFile.close();
 }
