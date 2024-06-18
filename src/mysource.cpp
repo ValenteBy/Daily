@@ -30,6 +30,26 @@ void seach_files_txt()
     
 }
 
+void modify_txt()
+{
+    std::string open;
+    std::getline(std::cin, open);
+    open+=".txt";
+
+    std::ofstream outputFile(open);
+    if(outputFile.is_open())
+    {
+        std::string str = "";
+        std::getline(std::cin, str);
+        outputFile << str << std::endl;
+        outputFile.close();
+    }
+    else
+    {
+        std::cerr << "Nao abriu arquivo\n";
+    }   
+}
+
 void open_txt()
 {
     std::string open;
@@ -49,6 +69,7 @@ void open_txt()
     {
         std::cerr << "Nao leu\n";
     }
+    
 }
 
 bool no_create_file(std::string filesearch)

@@ -3,7 +3,7 @@
 
 int main(){
     
-    //create_file();
+    modify_txt();
     open_txt();
     
     return 0;
