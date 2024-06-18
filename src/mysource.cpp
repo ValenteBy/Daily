@@ -23,12 +23,32 @@ void create_file()
 
         MyFile.close();
     }
-    //MyFile.close();
 }
 
 void seach_files_txt()
 {
     
+}
+
+void open_txt()
+{
+    std::string open;
+    std::getline(std::cin,open);
+    open+=".txt";
+
+    std::ifstream inputFile(open);
+    if(inputFile.is_open())
+    {
+        std::string line;
+        while(getline(inputFile,line))
+        {
+            std::cout << line << std::endl;
+        }
+    }
+    else
+    {
+        std::cerr << "Nao leu\n";
+    }
 }
 
 bool no_create_file(std::string filesearch)

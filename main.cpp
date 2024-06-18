@@ -3,7 +3,8 @@
 
 int main(){
     
-    create_file();
+    //create_file();
+    open_txt();
     
     return 0;
 }
