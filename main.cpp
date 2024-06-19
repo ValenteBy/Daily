@@ -3,8 +3,7 @@
 
 int main(){
     
-    modify_txt();
-    open_txt();
+    seach_files_txt();
     
     return 0;
 }

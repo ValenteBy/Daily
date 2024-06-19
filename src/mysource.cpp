@@ -27,7 +27,13 @@ void create_file()
 
 void seach_files_txt()
 {
-    
+    fs::path directory = "D:\\PastaCPP\\Projects\\Project_One\\build\\Debug";
+    std::string type_file = ".txt";
+    for(const auto& entry : fs::recursive_directory_iterator(directory))
+    {
+        if(entry.path().extension() == type_file)
+            std::cout << entry.path() << std::endl;
+    }
 }
 
 void modify_txt()
