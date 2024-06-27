@@ -8,17 +8,20 @@
 
 namespace fs=std::filesystem;
 
-void create_file()
+void create_file(std::string& input_new_file)
 {
-    std::cout << "Digite o nome do seu novo arquivo: ";
-    std::string input_new_file = "";
-    std::getline(std::cin, input_new_file);
-    input_new_file+=".txt";
-    if(no_create_file(input_new_file))\
-        create_file();
+    
+    if(fs::exists(input_new_file))
+    {
+        std::cout << "Arquivo " << input_new_file << " exist\n";
+    }
     else
     {
         std::ofstream  MyFile(input_new_file);
+        
+        MyFile  << "Create File: " << __DATE__ 
+                << "  User: " << getenv("USERNAME") << std::endl;
+
         std::cout << "Create file!!\n";
 
         MyFile.close();
@@ -56,12 +59,8 @@ void modify_txt()
     }   
 }
 
-void open_txt()
+void open_txt(std::string& open)
 {
-    std::string open;
-    std::getline(std::cin,open);
-    open+=".txt";
-
     std::ifstream inputFile(open);
     if(inputFile.is_open())
     {
@@ -78,7 +77,7 @@ void open_txt()
     
 }
 
-bool no_create_file(std::string filesearch)
+bool no_create_file(std::string& filesearch)
 {
     if(fs::exists(filesearch))
     {
