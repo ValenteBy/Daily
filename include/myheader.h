@@ -1,6 +1,8 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
 
+//std::string directory;
+
 void create_file(std::string& str);
 
 void seach_files_txt();

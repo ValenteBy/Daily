@@ -13,7 +13,7 @@ void create_file(std::string& input_new_file)
     
     if(fs::exists(input_new_file))
     {
-        std::cout << "Arquivo " << input_new_file << " exist\n";
+        std::cout << "Arquivo " << input_new_file << " exist!\n";
     }
     else
     {
